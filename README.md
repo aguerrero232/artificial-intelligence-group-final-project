@@ -1,4 +1,4 @@
-# &emsp;&emsp; Artificial Intelligence Group Final Project
+# &emsp;&emsp;&emsp; Artificial Intelligence Group Final Project
 
 ## Object Detection for Self Driving UGV Using LiDAR and RGB Data
 
