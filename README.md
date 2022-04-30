@@ -11,6 +11,7 @@ ___
 * Ariel Guerrero - aes604
 * Johann Tschetter - pzt638
 
+[Discord Server](https://discord.gg/AQe3S42y)
 ___
 
 ## Objective
@@ -25,7 +26,7 @@ The system has an Ubuntu 18.04 OS, where ROS was installed and deployed. To expl
 
 ___
 
-## Approach: Exploration into reinforcement learning
+## Approach: Exploration into reinforcement learning using openai gym
 
 ___
 
@@ -89,3 +90,25 @@ ___
 * Final Results: ***RollerBall. Step: 500000. Time Elapsed: 3786.616 s. Mean Reward: 0.990. Std of Reward: 0.099. Final Results***
 
 ***[View Demo Here](https://play.unity.com/mg/other/webgl-builds-187355)***
+
+***Initial Starting point for the Rolling Agent***
+![Start](img/ball1.png)
+
+***Agent Moving Towards the Target (Goal) While Avoiding the Obstacles (Edge)***
+![Active](img/ball2.jpg)
+
+## Reinforcement Learning Approach
+
+Reinforcement Learning is a method of machine learning that seeks to improve the performance of an agent by taking action and rewards the agent based on the action taken. The goal of reinforcement learning is to train a machine to learn from experience without being explicitly told what the correct answer is. To traverse terrain that is not known to the agent, the agent must learn to use the information it has gained from experience to make decisions that are more likely to lead to success.
+
+We have implemented a Deep Q-learning algorithm to train one of our agents to learn to traverse a given environment diving deeper into topics in reinforcement and deep learning. We also utilized the Unity ML Agents to create a separate agent that can learn to control its own movement velocity and to avoid falling off the edge of the floor while also hitting a specified target that is randomly placed in the environment. By using the Deep Q-learning algorithm and the Unity ML Agents, we have learned to use reinforcement learning to train our own agents to act on environments while avoiding failure, maximizing reward, to dive deeper into topics in reinforcement, machine, and deep learning.
+
+## Reinforcement Learning Results
+
+After training the Unity agent over 500,000 steps over 3786.616 seconds. The agent attained a mean reward of 0.990 with a standard deviation of 0.099. The agent collected x and z position, and velocity data from the environment and plotted the data to show the agent’s path. Initially, the agent was slow and moved randomly. After training the agent, it began to learn to control its movement and velocity where it would make mistakes by either going to fast and falling off the edge of the floor then after several thousand steps, it would learn to avoid falling off the edge of the floor and hit the target. At the end of training the agent learned to precisely control its own movement and velocity to avoid falling off the edge of the floor while also hitting the target confirming that the agent operates as it is intended.
+
+## Hypothesis
+
+How does reinforcement learning work affect the rovers to learn to traverse the environment?
+
+##
