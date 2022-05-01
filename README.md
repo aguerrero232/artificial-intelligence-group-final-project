@@ -31,8 +31,6 @@ ___
 
 ## Approach: Exploration into reinforcement learning using openai gym
 
-___
-
 * Reinforcement learning is a method of machine learning that seeks to improve the performance of a learning algorithm by using feedback from the learning algorithm.
 
 * Implemented a Deep Q-learning algorithm to train the agent to learn to play a game to dive deeper into topics in reinforcement and deep learning.
@@ -102,6 +100,8 @@ ___
 
 ![Active](img/ball2.jpg)
 
+___
+
 ## Approach: Applying Reinforcement Learning to an agent that stays on track and goes the appropriate direction
 
 * First we will define the environment and the agent.
@@ -135,4 +135,4 @@ We have implemented a Deep Q-learning algorithm to train one of our agents to le
 
 ## Reinforcement Learning Results
 
-After training the Unity agent over 500,000 steps over 3786.616 seconds. The agent attained a mean reward of 0.990 with a standard deviation of 0.099. The agent collected x and z position, and velocity data from the environment and plotted the data to show the agent’s path. Initially, the agent was slow and moved randomly. After training the agent, it began to learn to control its movement and velocity where it would make mistakes by either going to fast and falling off the edge of the floor then after several thousand steps, it would learn to avoid falling off the edge of the floor and hit the target. At the end of training the agent learned to precisely control its own movement and velocity to avoid falling off the edge of the floor while also hitting the target confirming that the agent operates as it is intended.
+After training the Unity agent over 500,000 steps over 3786.616 seconds. The agent attained a mean reward of 0.990 with a standard deviation of 0.099. The agent collected x and z position, and velocity data from the environment and plotted the data to show the agent’s path. Initially, the agent was slow and moved randomly. After training the agent, it began to learn to control its movement and velocity where it would make mistakes by either going to fast and falling off the edge of the floor then after several thousand steps, it would learn to avoid falling off the edge of the floor and hit the target. At the end of training the agent learned to precisely control its own movement and velocity to avoid falling off the edge of the floor while also hitting the target confirming that the agent operates as it is intended. Moving on to creating an agent that can learn to navigate a complex track with checkpoints and obstacles turned out to be more difficult than the agent that was created to learned to navigate to a given target. The original agent was given a new reward system that would reward the agent for hitting a checkpoint and take points away for avoiding obstacles(the walls of the track). The agent utilized sensors with different ray distances and hit validation distances to simulate using lidar and determine its direction, speed, and how far away it is from walls(obstacles). The agent was able to learn to navigate the track and hit the target while avoiding obstacles after training for 500,000 steps over 4501 seconds. The mean reward of the agent was 2626 points with a standard deviation of 1872 points.
