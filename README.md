@@ -110,6 +110,7 @@ ___
   * checkpoints are points on the track that the agent must hit in order to progress to the next checkpoint.
   * The agent will receive a reward of +1 for hitting a checkpoint and -1 for hitting an obstacle.
   * The agent also utilizes sensors with different ray distances and hit validation distances to simulate using lidar and determine its direction, speed, and how far away it is from walls(obstacles).
+  * For training the agent is dropped at different positions on the track to promote exploration and avoid getting stuck.
 
 ***Training the Agent***
 
