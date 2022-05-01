@@ -123,6 +123,8 @@ ___
 
 ![](img/testing.gif)
 
+***Checkpoints are left visible here to show where they are on the track.***
+
 [Test 2: Click here to view in higher res](https://storage.googleapis.com/ai-videos/testing2.mp4)
 
 ![](img/testing2.gif)
