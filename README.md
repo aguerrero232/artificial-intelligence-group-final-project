@@ -24,6 +24,9 @@ ___
 
 The system has an Ubuntu 18.04 OS, where ROS was installed and deployed. To explain a big picture,” ROS consists of code and tools that help your project’s code run and do the required job—including the infrastructure for running it, like messages passing between processes. ROS is designed to be a loosely coupled system where a process is called a node and every node should be responsible for one task. Nodes communicate with each other using messages passing via logical channels called topics. Each node can send or get data from the other node using the publish/subscribe model”. Tawil (2017) Using ROS, the algorithm will be deployed to change the path of the rover depending on the parameters defined when reading the real-time data coming from the LiDAR as point-cloud based points to avoid obstacles.
 
+## Hypothesis
+
+How does reinforcement learning work affect the rovers to learn to traverse the environment?
 ___
 
 ## Approach: Exploration into reinforcement learning using openai gym
@@ -77,7 +80,7 @@ dive deeper in learning about the concept of deep learning.
 
 ___
 
-## Approach: Applying Reinforcement Learning to simulated environment using ml-agents and unity
+## Approach: Applying Reinforcement Learning to a simple agent using ml-agents and unity
 
 * ***Unity*** is a game engine that allows you to develop and test your own games, simulations, and AI agents.
 
@@ -92,10 +95,37 @@ ___
 ***[View Demo Here](https://play.unity.com/mg/other/webgl-builds-187355)***
 
 ***Initial Starting point for the Rolling Agent***
+
 ![Start](img/ball1.png)
 
 ***Agent Moving Towards the Target (Goal) While Avoiding the Obstacles (Edge)***
+
 ![Active](img/ball2.jpg)
+
+## Approach: Applying Reinforcement Learning to an agent that stays on track and goes the appropriate direction
+
+* First we will define the environment and the agent.
+  * The environment is a plane with a repeating track that has walls and complex turns
+* The agent is then trained on the environment to stay on track and go the appropriate direction by rewarding it based on its direction, speed, and ability to hit checkpoints.
+  * checkpoints are points on the track that the agent must hit in order to progress to the next checkpoint.
+  * The agent will receive a reward of +1 for hitting a checkpoint and -1 for hitting an obstacle.
+  * The agent also utilizes sensors with different ray distances and hit validation distances to simulate using lidar and determine its direction, speed, and how far away it is from walls(obstacles).
+
+***Training the Agent***
+
+[Training: Click here to view in higher res](https://storage.googleapis.com/ai-videos/training.mp4)
+
+![training](img/training.gif)
+
+***Testing Trained Agent On Environment***
+
+[Test 1: Click here to view in higher res](https://storage.googleapis.com/ai-videos/testing.mp4)
+
+![](img/testing.gif)
+
+[Test 2: Click here to view in higher res](https://storage.googleapis.com/ai-videos/testing2.mp4)
+
+![](img/testing2.gif)
 
 ## Reinforcement Learning Approach
 
@@ -106,9 +136,3 @@ We have implemented a Deep Q-learning algorithm to train one of our agents to le
 ## Reinforcement Learning Results
 
 After training the Unity agent over 500,000 steps over 3786.616 seconds. The agent attained a mean reward of 0.990 with a standard deviation of 0.099. The agent collected x and z position, and velocity data from the environment and plotted the data to show the agent’s path. Initially, the agent was slow and moved randomly. After training the agent, it began to learn to control its movement and velocity where it would make mistakes by either going to fast and falling off the edge of the floor then after several thousand steps, it would learn to avoid falling off the edge of the floor and hit the target. At the end of training the agent learned to precisely control its own movement and velocity to avoid falling off the edge of the floor while also hitting the target confirming that the agent operates as it is intended.
-
-## Hypothesis
-
-How does reinforcement learning work affect the rovers to learn to traverse the environment?
-
-##
